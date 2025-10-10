@@ -6,12 +6,48 @@
   <title>Informasi Lainnya</title>
 
   <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* Glassmorphism untuk section */
+    section.fade-slide-up {
+      display: grid;
+      grid-template-columns: 1fr 1fr; /* 2 kolom */
+      gap: 1rem;
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: #fff;
+      margin-bottom: 1.5rem;
+    }
+    /* Buat judul section span dua kolom */
+    section.fade-slide-up > h3 {
+      grid-column: 1 / -1;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    /* List diatur supaya masuk ke kolom grid */
+    section.fade-slide-up ul {
+      margin: 0;
+      padding-left: 1.2rem;
+      list-style: disc;
+    }
+    section.fade-slide-up ul li {
+      margin-bottom: 0.5rem;
+    }
+    /* Untuk paragraph di kontak supaya span 2 kolom */
+    section.fade-slide-up p {
+      grid-column: 1 / -1;
+      margin: 0.3rem 0;
+    }
+  </style>
 </head>
 <body>
   <main class="container" style="grid-template-columns: 1fr; padding: 2rem;">
     <h2 style="grid-column: 1 / -1; margin-bottom: 1.5rem;">Informasi Lainnya</h2>
 
-    <section class="fade-slide-up" style="margin-bottom: 1.5rem;">
+    <section class="fade-slide-up">
       <h3>Data Diri</h3>
       <ul>
         <li><strong>Nama:</strong> [Nixie Adilla Marbun]</li>
@@ -20,7 +56,7 @@
       </ul>
     </section>
 
-    <section class="fade-slide-up" style="margin-bottom: 1.5rem;">
+    <section class="fade-slide-up">
       <h3>Hobi & Minat</h3>
       <ul>
         <li>Berenang</li>
@@ -32,7 +68,7 @@
       </ul>
     </section>
 
-    <section class="fade-slide-up" style="margin-bottom: 1.5rem;">
+    <section class="fade-slide-up">
       <h3>Kontak</h3>
       <p>Email: <a href="mailto:nixiehai263@gmail.com">nixiehai263@gmail.com</a></p>
       <p>GitHub: <a href="https://github.com/keepinthink" target="_blank">github.com/keepinthink</a></p>
